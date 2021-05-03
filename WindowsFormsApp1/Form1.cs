@@ -108,5 +108,12 @@ namespace WindowsFormsApp1
         {
             pictureBox1.Image.Save("123.png");
         }
+
+        private void zoom_Click(object sender, EventArgs e)
+        {
+            z0.a += 0.01;
+            aa /= 1.1;
+            Draw();
+        }
     }
 }

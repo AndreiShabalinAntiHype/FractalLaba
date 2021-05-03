@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
             this.aTextBox = new System.Windows.Forms.TextBox();
             this.drawButton = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
+            this.zoom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +140,22 @@ namespace WindowsFormsApp1
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
             // 
+            // zoom
+            // 
+            this.zoom.Location = new System.Drawing.Point(559, 779);
+            this.zoom.Name = "zoom";
+            this.zoom.Size = new System.Drawing.Size(179, 62);
+            this.zoom.TabIndex = 5;
+            this.zoom.Text = "zoom";
+            this.zoom.UseVisualStyleBackColor = true;
+            this.zoom.Click += new System.EventHandler(this.zoom_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1634, 962);
+            this.Controls.Add(this.zoom);
             this.Controls.Add(this.save);
             this.Controls.Add(this.drawButton);
             this.Controls.Add(this.aTextBox);
@@ -179,6 +191,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox aTextBox;
         private System.Windows.Forms.Button drawButton;
         private System.Windows.Forms.Button save;
+        private System.Windows.Forms.Button zoom;
     }
 }
 
