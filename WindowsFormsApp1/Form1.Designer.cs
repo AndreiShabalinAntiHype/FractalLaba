@@ -121,6 +121,8 @@ namespace WindowsFormsApp1
             // drawButton
             // 
             this.drawButton.BackColor = System.Drawing.Color.Red;
+            this.drawButton.FlatAppearance.BorderSize = 0;
+            this.drawButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.drawButton.Location = new System.Drawing.Point(43, 762);
             this.drawButton.Margin = new System.Windows.Forms.Padding(10);
             this.drawButton.Name = "drawButton";

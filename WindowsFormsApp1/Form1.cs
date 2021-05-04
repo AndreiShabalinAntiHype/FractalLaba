@@ -94,7 +94,7 @@ namespace WindowsFormsApp1
                 case (MouseButtons.Middle):
                     z0.a = 0;
                     z0.b = 0;
-                    aa = 4;
+                    aa = 2;
                     Draw();
                     break;
                 default:
