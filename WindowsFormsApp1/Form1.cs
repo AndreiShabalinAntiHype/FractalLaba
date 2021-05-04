@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
     {
         double r = 2;
         int n = 300;
-        double aa = 4;
+        double aa = 2;
         Complex z0 = new Complex(0, 0);
 
         public Form1()
@@ -27,12 +27,10 @@ namespace WindowsFormsApp1
             Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             for (int x = 0; x < pictureBox1.Width; ++x)
             {
-                double a = z0.a +  (double)(x - (pictureBox1.Width / 2)) / (double)(pictureBox1.Width / aa);
-             //   a = (hx - sizeArea / 2) + x * (sizeArea / size.Width);
+                double a = z0.a +  (double)(x - (pictureBox1.Width / 2)) / (double)(pictureBox1.Width / (aa * 2));
                 for (int y = 0; y < pictureBox1.Height; ++y)
                 {
-                    double b = z0.b + (double)(y - (pictureBox1.Height / 2)) / (double)(pictureBox1.Height / aa);
-                   // b = (hy - sizeArea / 2) + y * (sizeArea / size.Height);
+                    double b = z0.b + (double)(y - (pictureBox1.Height / 2)) / (double)(pictureBox1.Height / (aa*2));
                     Complex c = new Complex(a, b);
                     Complex z = new Complex(z0.a,z0.b);
                     int it = 0;
@@ -82,14 +80,14 @@ namespace WindowsFormsApp1
             switch (e.Button)
             {
                 case (MouseButtons.Left):
-                    z0.a += (double)(e.X - (pictureBox1.Width / 2)) / (double)(pictureBox1.Width / aa);
+                    z0.a += (double)(e.X - (pictureBox1.Width / 2)) / (double)(pictureBox1.Width / (2 * aa));
                     z0.b += (double)(e.Y - (pictureBox1.Height / 2)) / (double)(pictureBox1.Height / aa);
                     aa /= 1.3;
                     Draw();
                     break;
                 case (MouseButtons.Right):
-                    z0.a += (double)(e.X - (pictureBox1.Width / 2)) / (double)(pictureBox1.Width / aa);
-                    z0.b += (double)(e.Y - (pictureBox1.Height / 2)) / (double)(pictureBox1.Height / aa);
+                    z0.a += (double)(e.X - (pictureBox1.Width / 2)) / (double)(pictureBox1.Width / (2 * aa));
+                    z0.b += (double)(e.Y - (pictureBox1.Height / 2)) / (double)(pictureBox1.Height / (2 * aa));
                     aa *= 1.3;
                     Draw();
                     break;
