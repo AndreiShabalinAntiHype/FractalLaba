@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Complex c = new Complex("4+4i");
+
         }
 
         private void drawButton_Click(object sender, EventArgs e)
